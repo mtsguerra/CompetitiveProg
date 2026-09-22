@@ -29,7 +29,7 @@ class ex4 {
      * Space complexity: O(n)
      *
      * @param args Gives me the sequence of numbers
-     * @throws IOException trust mooshak
+     * @throws IOException trust mooshak.
      */
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
