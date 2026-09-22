@@ -15,6 +15,9 @@ class ex6{
      * Approach: using a two pointer array implemented on a sliding window
      * technic to keep track of the current sequence.
      *
+     * Time complexity: O(n)
+     * Space complexity: O(n)
+     *
      * @param args the sequence given
      * @throws IOException trust mooshak
      */
