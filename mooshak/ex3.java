@@ -17,8 +17,8 @@ class ex3 {
      * This is because each pair of 2 and 5 contributes to a trailing zero,
      * and there 5 factors are rarer than 2 ones.
      *
-     * Time complexity = O(log n)
-     * Space complexity = O(1)
+     * Time complexity: O(log n)
+     * Space complexity: O(1)
      * @param args gives me the number to find out
      * @throws IOException trust mooshak
      */
