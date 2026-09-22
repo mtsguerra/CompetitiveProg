@@ -32,7 +32,7 @@ class ex1{
         StringTokenizer st = new StringTokenizer(br.readLine());
         long currentHighest = Long.parseLong(st.nextToken());
         long numberOfMoves = 0;
-        for (long i=0; i<n-1; i++){
+        for (long i = 0; i < n-1; i++){
             if (!st.hasMoreTokens()){
                 st = new StringTokenizer(br.readLine());
             }
