@@ -21,6 +21,9 @@ class ex5 {
      * popular combinantions and if they have the same amount using this to
      * multiply it and return the intended result
      *
+     * Time complexity: O(n)
+     * Space complexity: O(n)
+     *
      * @param args give me the frosh
      * @throws IOException trust mooshak
      */
