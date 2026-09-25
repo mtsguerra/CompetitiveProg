@@ -95,6 +95,14 @@ class ex9 {
     }
 
     /**
+     * [PC009] Sliding Window Cost
+     *
+     * "You are given an array of n integers. Your task is to calculate for
+     * each window of k elements, from left to right, the minimum total cost of
+     * making all elements equal. You can increase or decrease each element
+     * with cost x where x is the difference between the new and the original
+     * value. The total cost is the sum of such costs."
+     *
      * Main method to run the program
      *
      * Time complexity: O(n log n)
