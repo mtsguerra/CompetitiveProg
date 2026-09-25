@@ -96,6 +96,10 @@ class ex9 {
 
     /**
      * Main method to run the program
+     *
+     * Time complexity: O(n log n)
+     * Space complexity: O(n)
+     *
      * @param args command line arguments
      * @throws IOException trust mooshak
      */
