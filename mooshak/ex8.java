@@ -17,6 +17,9 @@ class ex8 {
      * semaphores, and when adding a new one, I can update the distances in
      * the Treemap.
      *
+     * Time complexity: O(n log n)
+     * Space complexity: O(n)
+     *
      * @param args street len and the semaphors
      * @throws IOException trust mooshak
      */
