@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 import java.io.IOException;
 
-class ex1{
+class ex01 {
     /**
      *  [PC001] Increasing Array
      *

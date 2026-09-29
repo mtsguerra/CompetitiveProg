@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 import java.io.IOException;
 
-class ex2 {
+class ex02 {
     /**
      * [PC002] Encryption
      *

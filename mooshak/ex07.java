@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-class ex7 {
+class ex07 {
     /**
      *
      * [PC007] Lemmings Battle

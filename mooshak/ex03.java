@@ -4,7 +4,7 @@ import java.util.StringTokenizer;
 import java.io.IOException;
 
 
-class ex3 {
+class ex03 {
     /**
      * [PC003] Trailing Zeros
      *

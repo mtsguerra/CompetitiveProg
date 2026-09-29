@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
-class ex5 {
+class ex05 {
     /**
      * [PC005] Conformity
      *

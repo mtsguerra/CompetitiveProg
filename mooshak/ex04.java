@@ -6,7 +6,7 @@ import java.util.Set;
 import java.util.StringTokenizer;
 import java.io.IOException;
 
-class ex4 {
+class ex04 {
     /**
      * [PC004] Cool Sequences
      *

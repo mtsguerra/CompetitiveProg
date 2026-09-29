@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.HashSet;
 import java.util.StringTokenizer;
 
-class ex6{
+class ex06 {
     /**
      * [PC006] Playlist
      *

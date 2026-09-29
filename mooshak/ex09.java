@@ -7,7 +7,7 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 import java.util.TreeMap;
 
-class ex9 {
+class ex09 {
 
     static int leftCount;
     static long leftSum;

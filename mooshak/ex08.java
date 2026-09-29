@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.*;
 
-class ex8 {
+class ex08 {
     /**
      * [PC008] Traffic Lights
      *
