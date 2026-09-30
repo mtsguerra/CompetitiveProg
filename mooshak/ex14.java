@@ -2,12 +2,41 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.StringTokenizer;
 
 class ex14 {
+
+    private static long caculateCost (int index, int height, int nBuildings,
+                                      long[] prefixHeightCost, long[] prefixCosts){
+        if (index == -1) {
+            return prefixHeightCost[nBuildings - 1] -
+                    ((long) height * prefixCosts[nBuildings - 1]);
+        }
+        long leftSum =
+                (height * prefixCosts[index]) - prefixHeightCost[index];
+        long rightSum =
+                prefixHeightCost[nBuildings - 1] - prefixHeightCost[index] -
+                        (height * (prefixCosts[nBuildings - 1] - prefixCosts[index]));
+        return leftSum + rightSum;
+    }
+
+    private static int indexToCalc (int height, int[][] heightsAndPrices,
+                                    int nBuildings){
+        int right = nBuildings - 1;
+        int left = 0;
+        int ans = -1;
+        while (right >= left){
+            int mid = left + (right - left) / 2;
+            if (heightsAndPrices[mid][0] <= height){
+                ans = mid;
+                left = mid + 1;
+            } else {
+                right = mid-1;
+            }
+        }
+        return ans;
+    }
 
     public static void main(String[] args) throws IOException{
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
@@ -32,7 +61,7 @@ class ex14 {
                 out.println(0);
                 continue;
             }
-
+/*
             long leftSum = 0;
             long leftPricesSum = 0;
             long rightSum = 0;
@@ -48,6 +77,7 @@ class ex14 {
                 rightPricesSum += crrP;
             }
 
+
             long[] prices =
                     new long[heightsAndPrices[nBuildings - 1][0] + 1 ];
             int crrIndx = 0;
@@ -61,7 +91,18 @@ class ex14 {
                 }
                 prices[i] = leftSum + rightSum;
             }
+             */
 
+            long[] prefixCosts = new long[nBuildings];
+            long[] prefixHeightCost = new long[nBuildings];
+            prefixCosts[0] = heightsAndPrices[0][1];
+            prefixHeightCost[0] = (long) heightsAndPrices[0][0] * heightsAndPrices[0][1];
+            for (int i = 1; i < nBuildings; i++){
+                prefixCosts[i] =
+                        prefixCosts[i-1] + heightsAndPrices[i][1];
+                prefixHeightCost[i] =
+                        prefixHeightCost[i-1] + (long) heightsAndPrices[i][1] * heightsAndPrices[i][0];
+            }
 
             int lowHeight = heightsAndPrices[0][0];
             int highHeight = heightsAndPrices[nBuildings - 1][0];
@@ -70,8 +111,12 @@ class ex14 {
                 int mid1 = lowHeight + (highHeight - lowHeight) / 3;
                 int mid2 = highHeight - (highHeight - lowHeight) / 3;
 
-                long mid1Price = prices[mid1];
-                long mid2Price = prices[mid2];
+                int mid1Indx = indexToCalc(mid1, heightsAndPrices, nBuildings);
+                int mid2Indx = indexToCalc(mid2, heightsAndPrices, nBuildings);
+                long mid1Price = caculateCost(mid1Indx, mid1, nBuildings,
+                        prefixHeightCost, prefixCosts);
+                long mid2Price = caculateCost(mid2Indx, mid2, nBuildings,
+                        prefixHeightCost, prefixCosts);
 
                 if (mid2Price > mid1Price){
                     highHeight = mid2-1;
